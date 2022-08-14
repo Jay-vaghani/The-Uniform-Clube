@@ -1,11 +1,62 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>Hello World</h1>
+    <form class="form">
+        <input id="name" type="text" placeholder="Please Enter Your Name">
+        <input id="email" type="email" placeholder="Please Enter Your Email">
+        <input id="phoneNumber" type="number" placeholder="Please Enter Your Phone Number ">
+        <textarea name="message" id="message" id="message" cols="30" rows="10"
+            placeholder="Please Enter your message"></textarea>
+        <button type="submit" id="submit">SUBMIT</button>
+    </form>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+
+
+        let btn = document.querySelector('#submit');
+
+        btn.addEventListener('click', async (e) => {
+            e.preventDefault();
+
+            let form = document.querySelector('.form');
+            let name = document.getElementById('name').value;
+            let email = document.getElementById('email').value;
+            let phoneNumber = document.getElementById('phoneNumber').value;
+            let message = document.getElementById('message').value;
+
+
+            const body = "<h1>client inquiry</h1>" + "Name: " + name + "<br />Email: " + email + "<br />Phone Number: " + phoneNumber + "<br />Message: " + message;
+
+            await Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "jayvaghani10@gmail.com",
+                Password: "DAC33BE185C09CFD3436ABE1CE300BB1ED62",
+                To: 'theuniformclub17@gmail.com',
+                From: "jayvaghani10@gmail.com",
+                Subject: "This is the subject",
+                Body: body
+            }).then(
+                message => {
+                    alert(message)
+                    console.log(body);
+                }
+
+            );
+        }
+        );
+
+    </script>
 </body>
+
+
 </html>
