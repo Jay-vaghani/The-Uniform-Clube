@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonts and background color routs */
+
+:root {
+    --primary-color-light-brown: #EEDDCC;
+    --primary-color-dark-brown: #34251F;
+    --primary-color-brown: #413531;
+    --heading-font-family: 'Frank Ruhl Libre', serif;
+    --normal-font-family: 'Lato', sans-serif;
+    --space-between-sections: 7%;
+}
+
+/* Common Styles */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font-family);
+    font-weight: 700;
+    color: var(--primary-color-dark-brown);
+}
+
+p{
+    font-family: var(--normal-font-family);
+    color: var(--primary-color-dark-brown);
+
+}
+
+
+/* Header */
+
+
+.hero-page {
+    background-color: var(--primary-color-light-brown);
+}
+
+.hero-page nav .navbar-brand {
+    color: var(--primary-color-dark-brown);
+    font-size: 1.1rem;
+    font-weight: 750;
+    font-family: var(--normal-font-family);
+}
+
+.hero-page nav .nav-item {
+    font-family: var(--normal-font-family);
+}
+
+.hero-page nav .nav-link {
+    color: var(--primary-color-dark-brown);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding-right: 0 !important;
+}
+
+.hero-page .content-div h1 {
+    font-size: clamp(2.1rem, 5.7vw, 5rem);
+    line-height: 100%;
+    text-transform: capitalize;
+}
+
+.hero-page .content-div p {
+    font-family: var(--normal-font-family);
+    font-size: clamp(1rem, 2.9vw, 1.2rem);
+    text-transform: capitalize;
+    font-weight: 400;
+    line-height: 39.6px;
+}
+
+.hero-page .image-div {
+    max-width: 460px;
+}
+
+.hero-page .image-div img {
+    border-radius: 0 0 0 20%;
+}
+
+
+/* New Collection Section  */
+
+.new-collection{
+    margin-top: var(--space-between-sections);
+}
+
+.new-collection h2{
+    font-size: clamp(2rem, 5vw, 5rem);
+    line-height: 100%;
+    text-transform: capitalize;
+}
+
+.new-collection p{
+    font-family: var(--normal-font-family);
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    line-height: 39.6px;
+}
