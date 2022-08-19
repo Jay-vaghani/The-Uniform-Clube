@@ -1,99 +1,251 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* Fonts and background color routs */
 
 :root {
-    --primary-color-light-brown: #EEDDCC;
-    --primary-color-dark-brown: #34251F;
-    --primary-color-brown: #413531;
-    --heading-font-family: 'Frank Ruhl Libre', serif;
-    --normal-font-family: 'Lato', sans-serif;
-    --space-between-sections: 7%;
+	--primary-color-light-brown: #EEDDCC;
+	--primary-color-dark-brown: #34251F;
+	--primary-color-brown: #413531;
+	--heading-font-family: 'Frank Ruhl Libre', serif;
+	--normal-font-family: 'Lato', sans-serif;
+	--space-between-sections: 7%;
 }
 
 /* Common Styles */
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font-family);
-    font-weight: 700;
-    color: var(--primary-color-dark-brown);
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--heading-font-family);
+	font-weight: 700;
+	color: var(--primary-color-dark-brown);
 }
 
-p{
-    font-family: var(--normal-font-family);
-    color: var(--primary-color-dark-brown);
+h2{
+	font-size: clamp(2rem, 5vw, 5rem);
+	line-height: 100%;
+	text-transform: capitalize;
+}
+
+p {
+	font-family: var(--normal-font-family);
+	color: var(--primary-color-dark-brown);
 
 }
+
+/* Css For Swiper js */
+
+.swiper {
+	width: 100%;
+	height: 100%;
+  }
+
+  .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+  }
+
+  .swiper-slide img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+  }
 
 
 /* Header */
 
 
 .hero-page {
-    background-color: var(--primary-color-light-brown);
+	background-color: var(--primary-color-light-brown);
+	
 }
 
 .hero-page nav .navbar-brand {
-    color: var(--primary-color-dark-brown);
-    font-size: 1.1rem;
-    font-weight: 750;
-    font-family: var(--normal-font-family);
+	color: var(--primary-color-dark-brown);
+	font-size: 1.5rem;
+	font-weight: 750;
+	font-family: var(--normal-font-family);
 }
 
 .hero-page nav .nav-item {
-    font-family: var(--normal-font-family);
+	font-family: var(--normal-font-family);
 }
 
 .hero-page nav .nav-link {
-    color: var(--primary-color-dark-brown);
-    font-size: 0.9rem;
-    font-weight: 600;
-    padding-right: 0 !important;
+	color: var(--primary-color-dark-brown);
+	font-size: 1.1rem;
+	font-weight: 600;
+	padding-right: 0 !important;
 }
 
 .hero-page .content-div h1 {
-    font-size: clamp(2.1rem, 5.7vw, 5rem);
-    line-height: 100%;
-    text-transform: capitalize;
+	font-size: clamp(2.1rem, 5.7vw, 4rem);
+	line-height: 100%;
+	text-transform: capitalize;
 }
 
 .hero-page .content-div p {
-    font-family: var(--normal-font-family);
-    font-size: clamp(1rem, 2.9vw, 1.2rem);
-    text-transform: capitalize;
-    font-weight: 400;
-    line-height: 39.6px;
-}
-
-.hero-page .image-div {
-    max-width: 460px;
+	font-family: var(--normal-font-family);
+	font-size: clamp(1rem, 2.9vw, 1.3rem);
+	text-transform: capitalize;
+	font-weight: 600;
+	line-height: 39.6px;
 }
 
 .hero-page .image-div img {
-    border-radius: 0 0 0 20%;
+	border-radius: 0 0 0 20%;
 }
 
 
 /* New Collection Section  */
 
-.new-collection{
-    margin-top: var(--space-between-sections);
+.new-collection {
+	margin-top: var(--space-between-sections);
 }
 
-.new-collection h2{
-    font-size: clamp(2rem, 5vw, 5rem);
-    line-height: 100%;
-    text-transform: capitalize;
+.new-collection p {
+	font-family: var(--normal-font-family);
+	font-size: 1.15rem;
+	text-transform: capitalize;
+	font-weight: 600;
+	line-height: 39.6px;
 }
 
-.new-collection p{
-    font-family: var(--normal-font-family);
-    font-size: 1rem;
-    text-transform: capitalize;
-    font-weight: 400;
-    line-height: 39.6px;
+.new-collection .image-card {
+	height: 500px;
+	margin: 5% 0;
 }
+
+
+
+.new-collection .image-1 {
+	background: url("images/ruffty-polo-tipping-white-with-black-tipping-500x500-removebg-preview.png") no-repeat center center;
+	background-size: cover;
+
+}
+
+.new-collection .image-2 {
+	background: url("images/UnwwxWS3JXLP3nR7wcfGB-transformed.jpeg") no-repeat center center;
+	background-size: cover;
+
+}
+
+.new-collection .image-3 {
+	background: url("images/UnwwxWS3JXLP3nR7wcfGB-transformed.jpeg") no-repeat center center;
+	background-size: cover;
+
+}
+
+.card-btn {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0%);
+	bottom: 0;
+	width: 85%;
+	background-color: #fff;
+	border: 1px solid transparent;
+	color: var(--primary-color-dark-brown);
+	font-size: 1.2rem;
+	font-family: var(--normal-font-family);
+	font-weight: 700;
+	margin: 0 0 0 0;
+	padding: 15px 0;
+	opacity: 0;
+	transition: 0.3s ease-in-out;
+
+}
+
+.new-collection .card:hover .card-btn {
+	opacity: 1;
+	margin: 0 0 8% 0;
+}
+
+
+.new-collection .card-btn:hover {
+	transform-origin: left;
+	background-color: var(--primary-color-dark-brown);
+	color: #fff;
+}
+
+
+/* Best Fection Section */
+
+.best-fection{
+	margin-top: var(--space-between-sections);
+	margin-bottom: var(--space-between-sections);
+}
+
+.best-fection .image-div img{
+	border-radius: 20% 0 0 0;
+}
+
+.best-fection p {
+	font-family: var(--normal-font-family);
+	font-size: 1.15rem;
+	text-transform: capitalize;
+	font-weight: 600;
+	line-height: 39.6px;
+}
+
+.best-fection .review-section{
+	max-width: 800px;
+}
+
+
+/* Best Seller Section */
+
+.best-seller-section{
+	background-color: var(--primary-color-dark-brown);
+}
+
+.best-seller-section h3{
+	color: #fff;
+}
+
+.best-seller-section p{
+	color: #fff;
+}
+
+.best-seller-section h3{
+	text-transform: capitalize;
+	font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.best-seller-section p{
+	font-family: var(--normal-font-family);
+	font-size: 1rem;
+	text-transform: capitalize;
+	line-height: 30.6px;
+}
+
+/* .best-seller-section .swiper .swiper-slide .review-content{
+	position: absolute;
+	bottom: -50px;
+	background-color: #fff;
+	width: 100%;
+} */
+
+
