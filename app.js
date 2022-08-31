@@ -1,4 +1,4 @@
-
+AOS.init()
 // Swiper js  script for slider responsiveness 
 
 var swiper = new Swiper(".mySwiper", {
@@ -43,8 +43,6 @@ var swiper = new Swiper(".mySwiper", {
 
 $(document).ready(function () {
     $(".our-product .btn").click(function (e) {
-        $(".our-product .btn").removeClass("active")
-        e.target.classList.add("active")
 
         let selector = $(e.target).attr("data-filter")
 
